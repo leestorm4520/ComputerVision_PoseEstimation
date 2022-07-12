@@ -14,6 +14,7 @@ while True:
     if results.pose_landmarks:
         mpDraw.draw_landmarks(img, results.pose_landmarks, mpPose.POSE_CONNECTIONS)
         for id, lm in enumerate(results.pose_landmarks.landmark):
+            #height, width, and chanel
             h, w, c = img.shape
             print(id, lm)
             cx, cy = int(lm.x * w), int(lm.y * h)
